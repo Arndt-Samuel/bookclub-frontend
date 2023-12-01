@@ -32,7 +32,7 @@ export const LoginScreen = () => {
                     <Flex flexDir='column' w={['100%', '100%', '100%', '416px']} >
                         <Image src='/img/logo.svg' alt='BookClub Logo'w='160px' h='48px'/>
                         <Text.ScreenTitle mt='48px'>Login</Text.ScreenTitle>
-                        <Input id='email' name='email' value={values.email} mt='24px' placeholder='email@exemplo.com' onChange={handleChange} error={errors.email} />
+                        <Input type='email' id='email' name='email' value={values.email} mt='24px' placeholder='email@exemplo.com' onChange={handleChange} error={errors.email} />
                         <Input.Password id='password' name='password' value={values.password} mt='24px' placeholder='*******************' onChange={handleChange} error={errors.password} />
                         <Flex mt='8px' w='100%' alignItems='flex-end' justifyContent='flex-end'>
                         <Link onClick={() => navigate('/forgot-password')}>
