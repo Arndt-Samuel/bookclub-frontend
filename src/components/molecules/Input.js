@@ -1,12 +1,22 @@
 import { useState } from 'react'
 import { Text } from 'components/atoms'
-import { Input as ChakraInput, InputGroup, InputRightElement, Button } from '@chakra-ui/react'
+import {
+  Input as ChakraInput,
+  InputGroup,
+  InputRightElement,
+  Button
+} from '@chakra-ui/react'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 
 export const Input = (props) => (
   <>
-      <ChakraInput h='56px' fontSize='16px' focusBorderColor='brand.primary' {...props}/>
-      {props.error && <Text color='red'>{props.error}</Text>}
+    <ChakraInput
+      h="56px"
+      fontSize="16px"
+      focusBorderColor="brand.primary"
+      {...props}
+    />
+    {props.error && <Text color="red">{props.error}</Text>}
   </>
 )
 
@@ -15,26 +25,47 @@ Input.Password = ({ value, onChange, id, name, ...props }) => {
   const handleClick = () => setShow(!show)
 
   return (
-        <>
-        <InputGroup display='flex' alignItems='center' justifyContent='center' fontSize='16px'h='56px' size='md' {...props}>
+    <>
+      <InputGroup
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        fontSize="16px"
+        h="56px"
+        size="md"
+        {...props}
+      >
         <Input
           id={id}
           name={name}
           onChange={onChange}
           value={value}
-          focusBorderColor='brand.primary'
-          pr='4.5rem'
+          focusBorderColor="brand.primary"
+          pr="4.5rem"
           type={show ? 'text' : 'password'}
-          placeholder='*******************'
+          placeholder="*******************"
         />
-        <InputRightElement h='100%'>
-          <Button bg='transparent' _hover={{ bg: 'transparent' }} size='sm' onClick={handleClick} h='100%' display='flex' alignItems='center' justifyContent='center'>
-            {show ? <ViewOffIcon boxSize='18px' color='brand.primary'/> : <ViewIcon boxSize='18px'color='brand.primary'/>}
+        <InputRightElement h="100%">
+          <Button
+            bg="transparent"
+            _hover={{ bg: 'transparent' }}
+            size="sm"
+            onClick={handleClick}
+            h="100%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            {show ? (
+              <ViewOffIcon boxSize="18px" color="brand.primary" />
+            ) : (
+              <ViewIcon boxSize="18px" color="brand.primary" />
+            )}
           </Button>
         </InputRightElement>
       </InputGroup>
-      {props.error && <Text color='red'>{props.error}</Text>}
-      </>
+      {props.error && <Text color="red">{props.error}</Text>}
+    </>
   )
 }
 
