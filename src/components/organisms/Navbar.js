@@ -13,7 +13,7 @@ export const NavBar = () => {
     >
       <Image src="/img/logo.svg" alt="BookClub Logo" w="160px" h="48px" />
       <SearchBar />
-      <UserMenu/>
+      <UserMenu />
     </Flex>
   )
 }

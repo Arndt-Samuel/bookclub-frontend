@@ -73,7 +73,11 @@ export const ForgotPasswordScreen = () => {
             mt="24px"
             placeholder="E-mail"
           />
-          <Button isLoading={mutation.isLoading} onClick={handleSubmit} mt="24px">
+          <Button
+            isLoading={mutation.isLoading}
+            onClick={handleSubmit}
+            mt="24px"
+          >
             Avançar
           </Button>
         </Flex>

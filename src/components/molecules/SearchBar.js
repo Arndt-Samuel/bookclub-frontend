@@ -9,12 +9,12 @@ export const SearchBar = () => {
           <SearchIcon color="brand.greyDark" />
         </InputLeftElement>
         <Input
-          borderWidth='0px'
+          borderWidth="0px"
           w="100%"
           h="100%"
           placeholder="Digite o nome do livro ou autor"
           _placeholder={{ color: 'brand.greyDark' }}
-          focusBorderColor='transparent'
+          focusBorderColor="transparent"
         />
       </InputGroup>
     </Flex>

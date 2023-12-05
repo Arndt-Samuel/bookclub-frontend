@@ -105,7 +105,12 @@ export const ResetPasswordScreen = () => {
             mt="16px"
             placeholder="Confirmar nova senha"
           />
-          <Button isLoading={mutation.isLoading} onClick={handleSubmit} mb="12px" mt="24px">
+          <Button
+            isLoading={mutation.isLoading}
+            onClick={handleSubmit}
+            mb="12px"
+            mt="24px"
+          >
             Salvar
           </Button>
           <Link.Action

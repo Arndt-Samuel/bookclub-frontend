@@ -9,11 +9,11 @@ import { store } from 'services/store'
 function App () {
   return (
     <Provider store={store}>
-    <QueryClientProvider client={queryClient}>
-      <ChakraProvider theme={theme}>
-        <RouterProvider router={router} />
-      </ChakraProvider>
-    </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <ChakraProvider theme={theme}>
+          <RouterProvider router={router} />
+        </ChakraProvider>
+      </QueryClientProvider>
     </Provider>
   )
 }
