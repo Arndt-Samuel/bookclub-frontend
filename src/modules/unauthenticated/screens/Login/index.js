@@ -19,7 +19,7 @@ export const LoginScreen = () => {
       toast({
         title: 'Falha ao realizar login.',
         description:
-          error?.respose?.data?.error || 'Por favor, tente novamente.',
+          error?.response?.data?.error || 'Por favor, tente novamente.',
         status: 'error',
         duration: 3000,
         isClosable: true

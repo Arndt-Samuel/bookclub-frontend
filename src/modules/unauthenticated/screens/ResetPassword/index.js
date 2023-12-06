@@ -11,14 +11,12 @@ export const ResetPasswordScreen = () => {
   const toast = useToast()
   const [searchParams] = useSearchParams()
 
-  console.log({ email: searchParams.get('email') })
-
   const mutation = useMutation((data) => resetPasswordCall(data), {
     onError: (error) => {
       toast({
         title: 'Falha na requisição.',
         description:
-          error?.respose?.data?.error || 'Por favor, tente novamente.',
+          error?.response?.data?.error || 'Por favor, tente novamente.',
         status: 'error',
         duration: 3000,
         isClosable: true

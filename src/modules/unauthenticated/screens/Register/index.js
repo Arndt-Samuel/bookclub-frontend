@@ -14,7 +14,7 @@ export const RegisterScreen = () => {
       toast({
         title: 'Falha ao criar a conta.',
         description:
-          error?.respose?.data?.error || 'Por favor, tente novamente.',
+          error?.response?.data?.error || 'Por favor, tente novamente.',
         status: 'error',
         duration: 3000,
         isClosable: true
@@ -81,7 +81,6 @@ export const RegisterScreen = () => {
             placeholder="Nome completo"
           />
           <Input
-            type="email"
             id="email"
             name="email"
             value={values.email}

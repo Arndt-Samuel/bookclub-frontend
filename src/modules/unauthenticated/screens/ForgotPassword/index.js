@@ -15,7 +15,7 @@ export const ForgotPasswordScreen = () => {
       toast({
         title: 'Falha na requisição.',
         description:
-          error?.respose?.data?.error || 'Por favor, tente novamente.',
+          error?.response?.data?.error || 'Por favor, tente novamente.',
         status: 'error',
         duration: 3000,
         isClosable: true
@@ -84,7 +84,7 @@ export const ForgotPasswordScreen = () => {
       </Flex>
       <Flex
         w={['0%', '0%', '0%', '60%']}
-        h="100%"
+        h="100vh"
         backgroundImage="url('/img/auth_background.svg')"
         backgroundSize="cover"
         backgroundPosition="center"
