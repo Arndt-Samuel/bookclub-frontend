@@ -8,6 +8,7 @@ export const BookCard = ({ id, cover_url, name, author }) => {
   return (
     <Flex
       mr="16px"
+      mb='16px'
       flexDir="column"
       alignItems="center"
       justifyContent="center"
@@ -25,6 +26,7 @@ export const BookCard = ({ id, cover_url, name, author }) => {
       />
       <Text
         noOfLines={1}
+        maxWidth={['120px', '154px']}
         textAlign="center"
         mt="8px"
         fontSize="12px"

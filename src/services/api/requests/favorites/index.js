@@ -1,5 +1,12 @@
 import { api } from 'services/api'
 
+export const getFavorites = (data) =>
+  api.get('/userbook', {
+    headers: {
+      Authorization: `bearer ${localStorage.getItem('@bookclub_token')}`
+    }
+  })
+
 export const addBookToFavorite = (data) =>
   api.post('/userbook', data, {
     headers: {
