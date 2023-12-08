@@ -5,8 +5,8 @@ import { Text } from 'components/atoms'
 import { CategoryCard, BookCard } from 'components/molecules'
 import { getCategories, getBooksByCategory } from 'services/api/requests'
 
-export const CategoryList = () => {
-  const [selected, setSelected] = useState()
+export const CategoryList = ({ title, categoryId }) => {
+  const [selected, setSelected] = useState(categoryId)
   const { data } = useQuery('categories', getCategories)
   const bookQuery = useQuery(
     [`booksById${selected}`, selected],
@@ -29,8 +29,9 @@ export const CategoryList = () => {
       paddingX={['24px', '48px', '80px', '112px']}
       h="400px"
     >
-      <Text.ScreenTitle>Categorias</Text.ScreenTitle>
-      <Flex
+      <Text.ScreenTitle>{title || 'Categorias'}</Text.ScreenTitle>
+      {
+        !categoryId && <Flex
         css={{
           '::-webkit-scrollbar': {
             display: 'none'
@@ -50,6 +51,8 @@ export const CategoryList = () => {
             />
           ))}
       </Flex>
+      }
+
       <Flex
         css={{
           '::-webkit-scrollbar': {
