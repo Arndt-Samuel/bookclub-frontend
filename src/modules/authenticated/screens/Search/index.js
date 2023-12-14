@@ -19,12 +19,11 @@ export const SearchScreen = () => {
       <NavBar query={query} setQuery={setQuery} />
       <Flex
         flexDir="column"
-        alignItems={['center', 'flex-start']}
-        justifyContent={['center', 'flex-start']}
+        alignItems="flex-start"
+        justifyContent="flex-start"
         mt={['24px', '48px']}
         w="100%"
         maxW="100vw"
-        paddingX={['24px', '48px', '80px', '112px']}
       >
         <Flex paddingX={['24px', '48px', '80px', '112px']}>
           <Text.ScreenTitle>Resultados da Pesquisa:</Text.ScreenTitle>

@@ -8,7 +8,7 @@ export const AuthorCard = ({ id, avatar_url, name }) => {
   return (
     <Flex
       mr="16px"
-      mb='16px'
+      mb="16px"
       flexDir="column"
       alignItems="center"
       justifyContent="center"
