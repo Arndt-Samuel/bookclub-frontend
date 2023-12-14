@@ -12,7 +12,7 @@ import {
 } from 'react-icons/io5'
 import { GoShieldCheck } from 'react-icons/go'
 
-export const UserMenu = () => {
+export const UserMenu = ({ setShowModal, onLogout }) => {
   const userStore = useSelector((state) => state.user)
 
   const navigate = useNavigate()
@@ -30,35 +30,35 @@ export const UserMenu = () => {
       icon: IoPersonOutline,
       text: 'Dados pessoais',
       divider: false,
-      onClick: () => navigate('/')
+      onClick: () => setShowModal('user')
     },
     {
       id: 2,
       icon: GoShieldCheck,
       text: 'Alterar senha',
       divider: true,
-      onClick: () => navigate('/')
+      onClick: () => setShowModal('password')
     },
     {
       id: 3,
       icon: IoDocumentTextOutline,
       text: 'Termos de uso',
       divider: false,
-      onClick: () => navigate('/')
+      onClick: () => setShowModal('use-terms')
     },
     {
       id: 4,
       icon: IoClipboardOutline,
       text: 'Política de privacidade',
       divider: true,
-      onClick: () => navigate('/')
+      onClick: () => setShowModal('privacy-policy')
     },
     {
       id: 5,
       icon: IoLogOutOutline,
       text: 'Logout',
       divider: false,
-      onClick: () => navigate('/')
+      onClick: () => onLogout()
     }
   ]
 

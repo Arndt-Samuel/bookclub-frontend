@@ -14,8 +14,6 @@ export const SearchScreen = () => {
     }
   )
 
-  console.log({ data })
-
   return (
     <Flex flexDir="column">
       <NavBar query={query} setQuery={setQuery} />
